@@ -28,6 +28,8 @@
 	     }
 	     dbsample.setSerialnum("0312345678");
 	     out.println("Organization = <b>" + dbsample.getOrganization() + "</b>");
+	     
+	     dbsample.runQuery();
 	%>
 	
 	uname=<%= credentials.getUsername() %> and  uname=<%= credentials.getPassword() %> 

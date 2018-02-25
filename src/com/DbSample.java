@@ -1,5 +1,7 @@
 package com;
 
+import java.sql.SQLException;
+
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 
@@ -44,4 +46,10 @@ public class DbSample {
 		return organization;
 	}
 
+    public void runQuery() throws SQLException {
+    	DataSourceFactory mydb = new DataSourceFactory();
+    	mydb.dummydbquery();
+    }
+
+	
 }

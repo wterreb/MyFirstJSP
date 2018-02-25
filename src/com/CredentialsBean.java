@@ -1,5 +1,7 @@
 package com;
 
+
+
 import javax.ejb.Local;
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
@@ -33,5 +35,5 @@ public class CredentialsBean {
     //	System.out.format(Local.class.getEnclosingMethod().getName());
         return password;
     }
-
+    
 }

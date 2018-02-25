@@ -9,8 +9,6 @@
 <body>
 
 
-
-
 	<FORM NAME="form1" METHOD="POST">
 	       <INPUT TYPE="HIDDEN" NAME="buttonName">
 	       <INPUT TYPE="BUTTON" VALUE="Button 1" ONCLICK="button1()">
