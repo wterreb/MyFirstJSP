@@ -28,7 +28,6 @@ public class DataSourceFactory  {
 
     public void dummydbquery() throws SQLException {
     	Connection connection = null;
-    	
     	Statement statement = null;
     	ResultSet resultSet = null;
 
