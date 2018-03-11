@@ -116,23 +116,25 @@ public class LoginBean {
 	    	    // setEmail(resultSet.getString(email));      //  Add this to the database!
 	    	     setIsAdmin(resultSet.getString("isadmin"));
 	    	     
-	    	     if ( String(password).equals(dbpassword) )
-	    	  //   if ( password == dbpassword )
+	    	     if ( password.equals(dbpassword) )
 	    	     {
+	    	    	 System.out.println("LOGIN SUCCESSFULL");
 	    	    	 setIsValidated("true");
-	    	    	 System.out.println("VALIDATED");
+	    	    	 
 	    	     }
 	    	     else {
+	    	    	 System.out.println("LOGIN FAILED");
+	    	    	 setIsValidated("false");
 	    	    	 System.out.println("Given passwd = '" + getPassword() + "'");
 	    	    	 System.out.println("Actual passwd = '" + getActualPassword() + "'");
 	    	     }
 	    	     
-	    	     System.out.println(getUsername());
-	    	     System.out.println(getFirstname());
-	    	     System.out.println(getLastname());
-	    	     System.out.println(getPassword());
-	    	     System.out.println(getEmail());
-	    	     System.out.println(getIsAdmin());
+	    	   //  System.out.println(getUsername());
+	    	   //  System.out.println(getFirstname());
+	    	   //  System.out.println(getLastname());
+	    	   //  System.out.println(getPassword());
+	    	   //  System.out.println(getEmail());
+	    	   //  System.out.println(getIsAdmin());
             }
     	     
 /*

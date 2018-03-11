@@ -17,23 +17,41 @@
 	String pword = request.getParameter("password");	
 	%>
 	
-
-	
 	<%
 	 if ( uname != null ) {
+		    
 	    	 login.setUsername(uname);
 	    	 login.setPassword(pword);
 	    	 login.lookup();
+    		 if ( login.getIsValidated() == "true" ) {
+    			out.print("<b>LOGIN SUCCESSFULL</b>");
+    			
+    		 }
+    		 else {
+    			out.print("<b>LOGIN FAILED</b>");
+    			out.print("<br>");
+    			out.print("Please log in again");
+    			
+    	     }
 	 }
-	%>
-	
-	username = <%= login.getUsername() %><br>
-	password = <%= login.getPassword() %><br>
-	first name = <%= login.getFirstname() %><br>
-	last name = <%= login.getLastname() %><br>
-	email = <%= login.getEmail() %><br>
-	isAdmin = <%= login.getIsAdmin() %><br>
-	
+    %>
+    <p>You will be redirected in 3 seconds</p>   
+    <%
+    if ( login.getIsValidated() == "true" ) 
+    {
+    %>
+    	<br>Welcome  <%= login.getFirstname() %> <%= login.getLastname() %>   	
+    <%
+    	response.setHeader("Refresh", "3;url=/MyFirstJSP/button.jsp"); 
+    }
+    else {
+    	response.setHeader("Refresh", "3;url=login.jsp");	  	
+    }
+    %>
+    
+    
+        
+
 
 </body>
 </html>

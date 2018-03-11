@@ -26,8 +26,6 @@
 					<td><input type="submit" value="login">
 					</td>
 				</tr>
-			  	<input type="hidden" name="remoteHost" value="209.170.132.238">
-				<input type="hidden" name="userAgent"value="Mozilla/4.0 (compatible; MSIE 5.0; Windows NT; DigExt)">
 			</table>
 	</form>
 </body>
